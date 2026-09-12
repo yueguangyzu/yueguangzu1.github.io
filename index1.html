@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我们的婚礼邀请函</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", serif;
+        }
+        body {
+            background-color: #fff7f7;
+            color: #442c2e;
+            line-height: 1.8;
+        }
+        /* 导航 */
+        nav {
+            position: sticky;
+            top: 0;
+            background: #d8a7a7;
+            z-index: 99;
+        }
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+        }
+        nav a {
+            display: block;
+            padding:14px 18px;
+            color:white;
+            text-decoration: none;
+        }
+        nav a:hover{
+            background:#c48888;
+        }
+        section{
+            max-width:1100px;
+            margin:0 auto;
+            padding:60px 20px;
+        }
+        .title{
+            text-align:center;
+            font-size:32px;
+            color:#b86b77;
+            margin-bottom:35px;
+        }
+        /* 板块1：首页欢迎 */
+        #home{
+            min-height:100vh;
+            background: linear-gradient(rgba(216,167,167,0.3),rgba(255,247,247,0.8));
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+        }
+        #home h1{
+            font-size:48px;
+            color:#994e5b;
+            margin-bottom:20px;
+        }
+        #home p{
+            font-size:20px;
+        }
+
+        /* 图片容器 */
+        .img-wrap{
+            display:flex;
+            gap:16px;
+            flex-wrap:wrap;
+            justify-content:center;
+        }
+        .img-wrap img{
+            width:300px;
+            height:auto;
+            border-radius:12px;
+            box-shadow:0 4px 12px #00000022;
+        }
+        video{
+            max-width:100%;
+            border-radius:12px;
+            box-shadow:0 4px 12px #00000022;
+        }
+        .info-card{
+            background:#fff;
+            padding:30px;
+            border-radius:14px;
+            box-shadow:0 2px 10px rgba(184,107,119,0.15);
+        }
+        footer{
+            text-align:center;
+            padding:30px;
+            background:#d8a7a7;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <!--导航菜单，跳转6个板块-->
+    <nav>
+        <ul>
+            <li><a href="#home">首页欢迎</a></li>
+            <li><a href="#info">婚礼信息</a></li>
+            <li><a href="#photo">新人相册</a></li>
+            <li><a href="#video">甜蜜视频</a></li>
+            <li><a href="#message">宾客留言</a></li>
+            <li><a href="#location">婚礼定位</a></li>
+        </ul>
+    </nav>
+
+    <!--板块1 首页欢迎-->
+    <section id="home">
+        <h1>💐我们结婚啦💐</h1>
+        <p>诚邀您见证我们人生最重要的时刻</p>
+        <p style="margin-top:12px;">新郎：XXX &nbsp;&nbsp;新娘：XXX</p>
+    </section>
+
+    <!--板块2 婚礼信息-->
+    <section id="info">
+        <h2 class="title">📜婚礼信息</h2>
+        <div class="info-card">
+            <p>🕒时间：XXXX年XX月XX日 XX:XX</p>
+            <p>📍地点：XX酒店 XX宴会厅</p>
+            <p>💌寄语：感恩相遇，期待与您共享喜悦</p>
+        </div>
+    </section>
+
+    <!--板块3 新人相册（可以替换src为自己图片）-->
+    <section id="photo">
+        <h2 class="title">📷甜蜜相册</h2>
+        <div class="img-wrap">
+            <!--修改 src="你的图片路径"，放入多张婚纱照-->
+            <img src="pic1.jpg" alt="婚纱照1">
+            <img src="pic2.jpg" alt="婚纱照2">
+            <img src="pic3.jpg" alt="婚纱照3">
+        </div>
+    </section>
+
+    <!--板块4 甜蜜视频 支持放入婚礼短片/求婚视频-->
+    <section id="video">
+        <h2 class="title">🎬甜蜜时刻</h2>
+        <div style="text-align:center;">
+            <!--替换src为你的视频文件，mp4格式最佳-->
+            <video controls width="700">
+                <source src="wedding.mp4" type="video/mp4">
+                你的浏览器不支持播放视频
+            </video>
+        </div>
+    </section>
+
+    <!--板块5 宾客留言-->
+    <section id="message">
+        <h2 class="title">✍️祝福留言</h2>
+        <div class="info-card">
+            <p>写下您的祝福送给新人✨</p>
+            <textarea placeholder="在这里写下祝福..." rows="5" style="width:100%;margin:12px 0;padding:10px;border:1px solid #ddbbbb;border-radius:6px;"></textarea>
+            <button style="padding:10px 24px;background:#b86b77;color:white;border:none;border-radius:6px;cursor:pointer;">提交祝福</button>
+        </div>
+    </section>
+
+    <!--板块6 婚礼定位地址-->
+    <section id="location">
+        <h2 class="title">🗺️婚礼地点</h2>
+        <div class="info-card">
+            <p>酒店名称：XXXXXXXX</p>
+            <p>详细地址：XXXXXXXXXXXX</p>
+            <p>导航提示：可复制地址到地图软件导航</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>期待您的到来 · 新婚之喜</p>
+    </footer>
+</body>
+</html>
